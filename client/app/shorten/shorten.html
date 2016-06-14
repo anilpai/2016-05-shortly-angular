@@ -1,6 +1,19 @@
-<div id='container'>
-<!-- Your code here -->
-
+<div class="navigation">
+  <ul>
+     <li><a href='#/links' class="index">All Links</a></li>
+     <li><a href='#/shorten' class="create">Shorten</a></li>
+   </ul>
 </div>
 
-
+<div id='container'>
+  <form name="urlForm" method="post">
+     <input type="url" name="input" ng-model="link.url" placeholder="Enter a url to shorten." required></input>
+     <button ng-click="addLink(link)">Add Link</button>
+   </form>
+   <br />
+   <br />
+   <div role="alert">
+     <span class="error" ng-show="urlForm.input.$error.required"> Required! </span>
+     <span class="error" ng-show="urlForm.input.$error.url"> Not valid url! </span>
+   </div>
+</div>

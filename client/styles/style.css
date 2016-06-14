@@ -53,6 +53,10 @@ h1 {
   margin-top: 10px;
 }
 
+.input > search{
+    margin-left: 10px;
+}
+
 .link {
   clear: both;
   margin-bottom: 5px;
@@ -145,4 +149,3 @@ input[type=url]:focus {
 .creator .message {
   clear: both;
 }
-
