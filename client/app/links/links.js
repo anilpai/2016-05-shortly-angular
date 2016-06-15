@@ -4,6 +4,9 @@ angular.module('shortly.links', [])
   $scope.data = {};
   Links.getAll().then(function(links){
     $scope.data.links = links;
+  })
+  .catch(function(err){
+    console.error(err);
   });
   $scope.signout = Auth.signout;
 });
